@@ -43,7 +43,20 @@ func main() {
 		}
 
 	}
+
+	whatAreYou := func (i interface{}) {
+		switch i.(type) {
+		case int:
+			fmt.Println("This is a number")
+		case string:
+			fmt.Println("This is a string")
+		default:
+			fmt.Println("dont know")
+		}
+	}
 	whatAmI("apple")
 	whatAmI(1)
 	whatAmI(true)
+	whatAreYou(10)
+	whatAreYou("ssss")
 }
