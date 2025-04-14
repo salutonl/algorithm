@@ -39,4 +39,11 @@ func main() {
 	}
 	fmt.Println(m4)
 	fmt.Println(maps.Equal(m3, m4))
+
+	var not_initial  map[string]int
+	fmt.Printf("not_initial: %v %t \n", not_initial, not_initial == nil)
+
+	initial := make(map[string]int)
+	fmt.Printf("inital: %v, %t", initial, initial == nil)
+
 }
