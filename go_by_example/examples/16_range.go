@@ -1,15 +1,13 @@
-package main
+package examples
 
 import "fmt"
 
-
-func main() {
-
+func Range() {
 	for i := range 5 {
 		fmt.Printf("i: %v\n", i)
 	}
 
-	s := []int{1,2,3,4,5,6}
+	s := []int{1, 2, 3, 4, 5, 6}
 
 	for i, v := range s {
 		fmt.Println(i, v)

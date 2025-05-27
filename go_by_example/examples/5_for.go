@@ -1,8 +1,8 @@
-package main
+package examples
 
 import "fmt"
 
-func main() {
+func ForLoop() {
 	i := 1
 
 	for i <= 3 {
@@ -24,9 +24,9 @@ func main() {
 	}
 
 	for k := range 6 {
-		if k % 2 == 0 {
+		if k%2 == 0 {
 			continue
-		} 
+		}
 		fmt.Println(k)
 	}
 }

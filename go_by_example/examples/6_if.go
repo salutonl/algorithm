@@ -1,19 +1,19 @@
-package main
+package examples
 
 import "fmt"
 
-func main() {
-	if 7 % 2 == 1{
+func IfStatements() {
+	if 7%2 == 1 {
 		fmt.Println("7 is not divided by 2")
 	} else {
 		fmt.Println("7 is divided by 2")
 	}
 
-	if 8 % 2 == 0 {
+	if 8%2 == 0 {
 		fmt.Println("8 is divided by 2")
 	}
 
-	if 8 % 2 == 0 || 7 % 2 == 0 {
+	if 8%2 == 0 || 7%2 == 0 {
 		fmt.Println("either 7 or 8 is divided by 2")
 	}
 
