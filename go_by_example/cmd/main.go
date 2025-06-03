@@ -57,4 +57,25 @@ func main() {
 
 	var de examples.Describe = embed
 	fmt.Println(de.Describe())
+
+	index, value := examples.SliceIndex([]string{"apple", "banana", "orange"}, "banana")
+
+	if index != -1 {
+		fmt.Printf("index is %v, value is %v \n", index, value)
+	} else {
+		fmt.Printf("no match \n")
+	}
+
+	l := &examples.List[int]{}
+
+	fmt.Println(l.AllElements())
+
+	l.Push(3)
+	l.Push(2)
+
+	fmt.Println(l.AllElements())
+
+
+
+
 }
