@@ -41,5 +41,10 @@ func main() {
 
 	examples.Measure(fang)
 	examples.Measure(yuan)
+	
+	enums := examples.Trans(examples.ServiceConnected)
+	fmt.Println(enums)
 
+	enums2 := examples.Trans(examples.ServiceIdle)
+	fmt.Println(enums2)
 }
