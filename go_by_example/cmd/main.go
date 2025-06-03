@@ -47,4 +47,14 @@ func main() {
 
 	enums2 := examples.Trans(examples.ServiceIdle)
 	fmt.Println(enums2)
+
+	embed := examples.Container{
+		Base: examples.Base{Num:2},
+		S: "Peter",
+	}
+	fmt.Printf("this is embed Num: %v, S:%v and base.num %v\n", embed.Num, embed.S, embed.Base.Num)
+	fmt.Println(embed.Describe())
+
+	var de examples.Describe = embed
+	fmt.Println(de.Describe())
 }
