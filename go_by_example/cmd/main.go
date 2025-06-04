@@ -2,6 +2,7 @@ package main
 
 import (
 	"algorithm/go_by_example/examples"
+	"errors"
 	"fmt"
 )
 
@@ -95,4 +96,24 @@ func main() {
 		fmt.Printf("A Fib iterator %v \n", k)
 	}
 
+	if _, e := examples.F(100); e != nil {
+		fmt.Println("failed ", e)
+	} else {
+		fmt.Println("worked")
+	}
+
+
+	for i := range 5 {
+		fmt.Printf("range for %v \n", i)
+		e := examples.MakeTea(i)
+		if errors.Is(e, examples.ErrNoPower) {
+			fmt.Println("we should generate power")
+		} else if errors.Is(e, examples.ErrNoTea){
+			fmt.Println("go by some tea")
+		} else if e != nil {
+			fmt.Println("unknown err")
+		} else {
+			fmt.Println("tea is ok")
+		}
+	}
 }
