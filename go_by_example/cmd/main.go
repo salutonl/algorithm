@@ -75,7 +75,24 @@ func main() {
 
 	fmt.Println(l.AllElements())
 
+	for i := range l.ShowAll() {
+		fmt.Printf("list %v by iterators\n", i)
+	}
 
+	s := &examples.List[string]{}
+	s.Push("hahhah")
+	s.Push("ababab")
+	s.Push("agohahah")
 
+	for j := range s.ShowAll() {
+		fmt.Printf("a string iterators %v \n", j)
+	}
+
+	for k := range examples.GetFib() {
+		if k > 40 {
+			break
+		}
+		fmt.Printf("A Fib iterator %v \n", k)
+	}
 
 }
