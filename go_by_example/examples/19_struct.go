@@ -15,3 +15,13 @@ func NewPerson(name string) *person {
 func GetPersonAge(p *person) int {
 	return p.age
 }
+
+type Product struct {
+	Name string
+	Price float64
+	Stock int
+}
+
+func ApplyDiscount(product *Product, discount float64) {
+	product.Price = product.Price * discount
+}

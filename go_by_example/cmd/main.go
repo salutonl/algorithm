@@ -4,6 +4,7 @@ import (
 	"algorithm/go_by_example/examples"
 	"errors"
 	"fmt"
+	// "time"
 )
 
 func main() {
@@ -116,4 +117,31 @@ func main() {
 			fmt.Println("tea is ok")
 		}
 	}
+
+	chann := make(chan int)
+	go func ()  {
+		chann <- 1
+		chann <- 2
+	} ()
+	
+	
+	fmt.Println(<-chann)
+	fmt.Println(<-chann)
+
+	product := examples.Product{
+		Name: "Car",
+		Price: 20.11,
+		Stock: 100001,
+	}
+
+	fmt.Println(product.Price)
+
+	examples.ApplyDiscount(&product, 0.8)
+
+	fmt.Println(product.Price)
+
+	p2 := new(examples.Product)
+	p3 := &examples.Product{}
+	fmt.Println(p2)
+	fmt.Println(p3)
 }
